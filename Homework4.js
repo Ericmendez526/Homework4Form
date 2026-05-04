@@ -414,7 +414,7 @@ function reviewInput() {
 //Remove user input
 function removeReview()
 {
-    document.getElementById("showInput".innerHTML = "")
+    document.getElementById("showInput").innerHTML = "";
 }
 
 // Alert Box
