@@ -418,12 +418,19 @@ function removeReview()
 }
 
 // Alert Box
-function showAlert()
+function showAlert(message)
 {
-    var alertBox = document.getElementById("alert-box");
-    var closeAlert = document.getElementById("close-alert")
+    const alertBox = document.getElementById("alert-box");
+    const alertText = document.querySelector("#alert-content h4");
+    const closeAlert = document.getElementById("close-alert");
 
+    // Set the message dynamically
+    alertText.innerHTML = message;
+
+    // Show the box
     alertBox.style.display = "block";
+
+    // Close button
     closeAlert.onclick = function()
     {
         alertBox.style.display = "none";
@@ -607,6 +614,15 @@ function deleteAllCookies()
 //Ensures Cookie Delition if remember me is unchecked
 document.addEventListener("DOMContentLoaded", function () 
 {
+    //COOKIE WELCOME MESSAGE
+    const firstName = getCookie("firstName");
+
+    if (firstName !== "") 
+    {
+        showAlert("Welcome back, " + firstName + "!");
+    }
+
+    //REMEMBER ME LOGIC
     const rememberMe = document.getElementById("remember-me").checked;
 
     if (!rememberMe) {
