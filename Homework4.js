@@ -414,23 +414,16 @@ function reviewInput() {
 //Remove user input
 function removeReview()
 {
-    document.getElementById("showInput").innerHTML = "";
+    document.getElementById("showInput").innerHTML = ""
 }
 
 // Alert Box
-function showAlert(message)
+function showAlert()
 {
-    const alertBox = document.getElementById("alert-box");
-    const alertText = document.querySelector("#alert-content h4");
-    const closeAlert = document.getElementById("close-alert");
+    var alertBox = document.getElementById("alert-box");
+    var closeAlert = document.getElementById("close-alert")
 
-    // Set the message dynamically
-    alertText.innerHTML = message;
-
-    // Show the box
     alertBox.style.display = "block";
-
-    // Close button
     closeAlert.onclick = function()
     {
         alertBox.style.display = "none";
@@ -565,9 +558,9 @@ inputs.forEach(function (input)
 var firstName = getCookie("firstName");
 if (firstName !== "") 
     {
-    document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
+    alert(document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
     document.getElementById("welcome2").innerHTML =
-        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
+        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";)
 
     document.getElementById("new-user").addEventListener("click", function () {
         inputs.forEach(function (input) {
@@ -614,15 +607,6 @@ function deleteAllCookies()
 //Ensures Cookie Delition if remember me is unchecked
 document.addEventListener("DOMContentLoaded", function () 
 {
-    //COOKIE WELCOME MESSAGE
-    const firstName = getCookie("firstName");
-
-    if (firstName !== "") 
-    {
-        showAlert("Welcome back, " + firstName + "!");
-    }
-
-    //REMEMBER ME LOGIC
     const rememberMe = document.getElementById("remember-me").checked;
 
     if (!rememberMe) {
