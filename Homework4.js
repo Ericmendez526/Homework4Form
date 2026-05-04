@@ -526,17 +526,17 @@ function getCookie(name)
 
 var inputs = 
 [
-    {id: "Fname", cookieName: "firstName"}
-    {id: "MI", cookieName: "middleInitial"}
-    {id: "Lname", cookieName: "lastName"}
-    {id: "DOB" , cookieName: "DOB"}
-    {id: "SSN", cookieName: "SSN"}
-    {id: "AL1", cookieName: "addressLine1"}
-    {id: "AL2", cookieName: "addressLine2"}
-    {id: "City", cookieName: "city"}
-    {id: "ZipCode", cookieName: "zipCode"}
-    {id: "Email", cookieName:"email"}
-    {id: "phoneNum", cookieName: "phoneNumber" }
+    {id: "Fname", cookieName: "firstName"},
+    {id: "MI", cookieName: "middleInitial"},
+    {id: "Lname", cookieName: "lastName"},
+    {id: "DOB" , cookieName: "DOB"},
+    {id: "SSN", cookieName: "SSN"},
+    {id: "AL1", cookieName: "addressLine1"},
+    {id: "AL2", cookieName: "addressLine2"},
+    {id: "City", cookieName: "city"},
+    {id: "ZipCode", cookieName: "zipCode"},
+    {id: "Email", cookieName:"email"},
+    {id: "phoneNum", cookieName: "phoneNumber" },
     {id: "Username", cookieName: "username"}
 ];
 
