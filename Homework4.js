@@ -500,3 +500,31 @@ function validateEverything()
     }
 }
 
+// Cookies
+function setCookie(name, cvalue, expiryDays) 
+{
+    var day = new Date();
+    day.setTime(day.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + day.toUTCString();
+    document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Cookie Retrieval by Name
+function getCookie(name) 
+{
+    var cookieName = name + "=";
+    var cookies = document.cookie.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf(cookieName) == 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return "";
+}
+
+var inputs = 
+[
+    {id:}
+];

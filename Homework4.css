@@ -5,8 +5,23 @@ Date: 2/02/2026
 Date last edited: 02/27/2026
 Description: A Patient intake form for a hospital
 */
+header
+    {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: powderblue;
+        transition: background-color 0.4 ease-in-out;
+        z-index: 1000
+    }
+header.scrolled
+    {
+        background-color: powderblue;
+        opacity: 1.0;
+    }
 body 
     {
+        display: flex;
         background-color: powderblue;
     }
 p
@@ -189,6 +204,43 @@ td.outputdata
     margin-top: 20px;
     text-align: center;
     font-family: "optima", sans-serif;
+}
+
+.iframe-container
+{
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    width: 25px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.iframe-container iframe
+{
+    width: 95%;
+    height: 20%;
+    border: 1px solid black;
+
+}
+
+#welcome1
+{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
+
+#welcome2
+{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
 }
 
 
