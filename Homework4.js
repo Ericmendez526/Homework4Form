@@ -556,19 +556,29 @@ inputs.forEach(function (input)
 
 //Greets Returning User
 var firstName = getCookie("firstName");
-if (firstName !== "") 
-    {
-    alert(document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
-    document.getElementById("welcome2").innerHTML =
-        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";)
 
-    document.getElementById("new-user").addEventListener("click", function () {
+if (firstName !== "") 
+{
+    alert("Welcome back, " + firstName + "!");
+
+    document.getElementById("welcome1").innerHTML =
+        "Welcome back, " + firstName + "!";
+
+    document.getElementById("welcome2").innerHTML =
+        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
+
+    // attach AFTER element exists
+    document.getElementById("new-user").addEventListener("click", function (e) {
+        e.preventDefault(); // stops page jump
+
         inputs.forEach(function (input) {
             setCookie(input.cookieName, "", -1);
         });
+
         location.reload();
     });
 }
+
 
 //Remember me
 document.getElementById("remember-me").addEventListener("change", function () 
