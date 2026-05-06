@@ -650,16 +650,13 @@ function submitFormWithFetch() {
 
     fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
     })
     .then(response => response.json())
     .then(result => {
         console.log("Form submitted successfully:", result);
-
-        // Redirect AFTER success
+        
         window.location.href = "thankyou4.html";
     })
     .catch(error => {
